@@ -41,7 +41,7 @@ public class PhotoController {
         photo.setPublicId(deleteUrl); // dùng delete_url như publicId
         photoRepository.save(photo);
 
-        String url = "/api/photos/view/" + photo.getId();
+        String url = "https://be-springboot-chuphinh-omo-production.up.railway.app/api/photos/view/" + photo.getId();
 
         String qrBase64 = generateQRCode(url);
 
