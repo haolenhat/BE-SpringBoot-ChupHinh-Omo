@@ -41,7 +41,7 @@ public class PhotoController {
         photo.setPublicId(deleteUrl); // dùng delete_url như publicId
         photoRepository.save(photo);
 
-        String url = "http://localhost:8080/api/photos/view/" + photo.getId();
+        String url = "/api/photos/view/" + photo.getId();
 
         String qrBase64 = generateQRCode(url);
 
