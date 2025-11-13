@@ -33,7 +33,8 @@ public class PhotoController {
 
         // Trích xuất thông tin từ response imgbb
         Map data = (Map) uploadResult.get("data");
-        String imageUrl = (String) data.get("url");
+        String imageUrl = (String) data.get("display_url");
+        //String imageUrl = (String) data.get("url");
         String deleteUrl = (String) data.get("delete_url");
 
         Photo photo = new Photo();
